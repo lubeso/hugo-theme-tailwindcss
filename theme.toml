@@ -1,0 +1,11 @@
+name = 'TailwindCSS'
+license = 'MIT'
+licenselink = 'https://github.com/lubeso/hugo-theme-tailwindcss/LICENSE'
+description = 'Enables TailwindCSS.'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/lubeso/hugo-theme-tailwindcss'
+
+[author]
+  name = 'Luis Becerra Solis'
+  homepage = 'https://www.lubeso.dev'
