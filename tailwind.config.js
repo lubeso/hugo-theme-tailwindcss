@@ -5,9 +5,7 @@ module.exports = {
     './assets/**/*.css',
   ],
   theme: {
-    extend: {
-      fontFamily: ['serif'],
-    },
+    extend: {},
   },
   plugins: [],
 }
