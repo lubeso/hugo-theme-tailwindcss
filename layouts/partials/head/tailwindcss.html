@@ -1,7 +1,8 @@
 {{ $defaultTailwindCss := dict "path" "/css/tailwind.css" }}
 {{ $siteTailwindCss := default (dict) site.Params.tailwindcss }}
 {{ $contextTailwindCss := default (dict) site.Params.tailwindcss }}
-{{ $tailwindCss := merge $defaultParams $siteTailwindCss $contextTailwindCss }}
+
+{{ $tailwindCss := merge $defaultTailwindCss $siteTailwindCss $contextTailwindCss }}
 {{- with resources.Get $tailwindCss.path | resources.PostCSS }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
