@@ -3,7 +3,7 @@
 {{ $contextTailwindCss := default (dict) .Params.tailwindcss }}
 
 {{ $tailwindCss := merge $defaultTailwindCss $siteTailwindCss $contextTailwindCss }}
-{{- with resources.Get $tailwindCss.path | resources.PostCSS }}
+{{- with resources.Get $tailwindCss.path | postCSS }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
   {{- else }}
